@@ -22,6 +22,8 @@ epochs = 20
 
 # TODO: Build the Fully Connected Neural Network in Keras Here
 model = Sequential()
+model.add(Convolution2D(32, 3, 3, input_shape= (32, 32, 3)))
+model.add(Activation('relu'))
 model.add(Flatten(input_shape = (32,32,3)))
 model.add(Dense(128))
 model.add(Activation('relu'))
